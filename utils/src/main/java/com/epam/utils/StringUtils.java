@@ -2,12 +2,12 @@ package com.epam.utils;
 
 public class StringUtils {
     public static boolean isPositiveNumber(String str) {
-        int i = 1;
         try {
-            i = Integer.parseInt(str.trim());
+            double i = Double.parseDouble(str.trim());
+            return i % 2 == 0;
         } catch (NumberFormatException e) {
             e.printStackTrace();
         }
-        return i % 2 == 0;
+        return false;
     }
 }
