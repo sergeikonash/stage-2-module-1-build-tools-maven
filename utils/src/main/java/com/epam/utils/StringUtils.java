@@ -5,7 +5,7 @@ public class StringUtils {
         try {
             double i = Double.parseDouble(str.trim());
             return i % 2 == 0;
-        } catch (NumberFormatException e) {
+        } catch (NumberFormatException | NullPointerException e) {
             e.printStackTrace();
         }
         return false;
